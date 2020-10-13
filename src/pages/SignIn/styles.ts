@@ -18,16 +18,17 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   // Todo o conteúdo do content vai ficar no centro
-  place-content: center;
+  /* place-content: center; */
 
   width: 100%;
   // Ocupa o máximo da tela possível mas que tenha o máximo de 700px
   max-width: 700px;
 
   form {
-    margin: 80px 0;
+    margin: 60px 0;
     width: 340px;
     text-align: center;
 
