@@ -129,4 +129,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with 💜 by Henrique Jensen 👋 [See my linkedin](https://www.linkedin.com/in/enrique-vinicius-jensen-31908148/)
+Made with 💜 by Henrique Jensen 👋 [See my linkedin](https://www.linkedin.com/in/henrique-vinicius-jensen-31908148)
