@@ -8,32 +8,13 @@
 
 <p align="center">The best way to schedule your service!</p>
 
-<!-- <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/EliasGcf/gobarber-web?color=%23FF9000">
-
-  <a href="https://www.linkedin.com/in/eliasgcf/" target="_blank" rel="noopener noreferrer">
-    <img alt="Made by" src="https://img.shields.io/badge/made%20by-elias%20gabriel-%23FF9000">
-  </a>
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/EliasGcf/gobarber-web?color=%23FF9000">
-
-  <a href="https://github.com/EliasGcf/gobarber-web/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/EliasGcf/gobarber-web?color=%23FF9000">
-  </a>
-
-  <a href="https://github.com/EliasGcf/gobarber-web/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/EliasGcf/gobarber-web?color=%23FF9000">
-  </a>
-
-  <img alt="GitHub" src="https://img.shields.io/github/license/EliasGcf/gobarber-web?color=%23FF9000">
-</p> -->
 
 <p align="center">
   <a href="#%EF%B8%8F-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-license">License</a>
+  <a href="#-license">License '</a>
 </p>
 
 </br>
