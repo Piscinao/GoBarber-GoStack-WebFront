@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { shade } from 'polished';
 
@@ -15,17 +15,37 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+  // Todo o conteúdo do content vai ficar no centro
+  /* place-content: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  // Todo o conteúdo do content vai ficar no centro
-  /* place-content: center; */
-
   width: 100%;
   // Ocupa o máximo da tela possível mas que tenha o máximo de 700px
   max-width: 700px;
+`;
+
+// animação quando entrar na pagina
+const appearFromLeft = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+
+  }
+`;
+export const AnimationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  animation: ${appearFromLeft} 1s;
 
   form {
     margin: 60px 0;
@@ -37,38 +57,38 @@ export const Content = styled.div`
     }
 
     /* input {
-      background: #232129;
-      border-radius: 10px;
-      border: 2px solid #232129;
-      padding: 16px;
-      width: 100%;
-      color: #f4ede8;
+    background: #232129;
+    border-radius: 10px;
+    border: 2px solid #232129;
+    padding: 16px;
+    width: 100%;
+    color: #f4ede8;
 
-      &::placeholder {
-        color: #666360;
-      }
+    &::placeholder {
+      color: #666360;
+    }
 
-      & + input {
-        margin-top: 8px;
-      }
-    } */
+    & + input {
+      margin-top: 8px;
+    }
+  } */
     /*
-    button {
-      background: #ff9000;
-      height: 56px;
-      border-radius: 10px;
-      border: 0;
-      padding: 0 16px;
-      color: #312e38;
-      width: 100%;
-      font-weight: 500;
-      margin-top: 16px;
-      transition: background-color 0.2s;
+  button {
+    background: #ff9000;
+    height: 56px;
+    border-radius: 10px;
+    border: 0;
+    padding: 0 16px;
+    color: #312e38;
+    width: 100%;
+    font-weight: 500;
+    margin-top: 16px;
+    transition: background-color 0.2s;
 
-      &:hover {
-        background: ${shade(0.2, '#ff9000')};
-      }
-    } */
+    &:hover {
+      background: ${shade(0.2, '#ff9000')};
+    }
+  } */
 
     a {
       color: #f4ede8;
