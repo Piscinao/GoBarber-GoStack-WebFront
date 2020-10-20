@@ -14,6 +14,7 @@ interface AuthContextData {
   user: object;
   // transforma o método em async ele está obrigariamente retornando uma promise
   signIn(credentials: SignInCredentials): Promise<void>;
+  signOut(): void;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -51,8 +52,16 @@ const AuthProvider: React.FC = ({ children }) => {
     setData({ token, user });
   }, []);
 
+  const signOut = useCallback(() => {
+    // Limpa o token do localstorage e seta o set data vazio
+    localStorage.removeItem('@GoBarber:token');
+    localStorage.removeItem('@GoBarber:user');
+
+    setData({} as AuthState);
+  }, []);
+
   return (
-    <AuthContext.Provider value={{ user: data.user, signIn }}>
+    <AuthContext.Provider value={{ user: data.user, signIn, signOut }}>
       {/* tudo o que o context provider recebe como filho irá estar repassando */}
       {children}
     </AuthContext.Provider>
