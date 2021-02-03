@@ -36,6 +36,8 @@
     "@typescript-eslint/ban-types": "off",
     "react/jsx-props-no-spreading": "off",
     "no-unused-expressions": "off",
+    "@typescript-eslint/camelcase": "off",
+    "eslint/camelcase": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "react/jsx-filename-extension": [
       1,

@@ -1,17 +1,23 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
 import api from '../services/api';
 
+interface User {
+  id: string;
+  name: string;
+  avatar_url: string;
+}
+
 interface AuthState {
   token: string;
   // Sem mostrar todas as proriedades
-  user: object;
+  user: User;
 }
 interface SignInCredentials {
   email: string;
   password: string;
 }
 interface AuthContextData {
-  user: object;
+  user: User;
   // transforma o método em async ele está obrigariamente retornando uma promise
   signIn(credentials: SignInCredentials): Promise<void>;
   signOut(): void;
