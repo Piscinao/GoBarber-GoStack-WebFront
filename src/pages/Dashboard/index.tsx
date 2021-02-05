@@ -10,6 +10,8 @@ import {
   Schedule,
   NextAppointment,
   Calendar,
+  Appointment,
+  Section,
 } from './styles';
 
 import logoImg from '../../assets/logo.svg';
@@ -42,8 +44,8 @@ const Dashboard: React.FC = () => {
           <h1>Horários agendadoos</h1>
           <p>
             <span>Hoje</span>
-            <span>Dia 06</span>
-            <span>Segunda-feira</span>
+            <span>Dia 05</span>
+            <span>Sexta-feira</span>
           </p>
 
           <NextAppointment>
@@ -61,6 +63,53 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img src={user.avatar_url} alt="Nome do usuário" />
+
+                <strong>Nome do usuário</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img src={user.avatar_url} alt="Nome do usuário" />
+
+                <strong>Nome do usuário</strong>
+              </div>
+            </Appointment>
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img src={user.avatar_url} alt="Nome do usuário" />
+
+                <strong>Nome do usuário</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
 
         <Calendar />
