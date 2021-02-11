@@ -36,8 +36,12 @@ const AuthProvider: React.FC = ({ children }) => {
     // se existe a informação de token e usuario retorna a informação
     // parse transforma de volta s tring em um objeto
     if (token && user) {
+      // defina um header com nome auth como padrao todas requsições com o token
+      api.defaults.headers.authorization = `Bearer ${token}`;
+
       return { token, user: JSON.parse(user) };
     }
+
     // forçar a tipagem do objeto
     return {} as AuthState;
   });
@@ -52,6 +56,9 @@ const AuthProvider: React.FC = ({ children }) => {
 
     localStorage.setItem('@GoBarber:token', token);
     localStorage.setItem('@GoBarber:user', JSON.stringify(user));
+
+    // defina um header com nome auth como padrao todas requsições com o token
+    api.defaults.headers.authorization = `Bearer ${token}`;
 
     // logo após login preenche o estado com as informações
     // enquanto o app estiver funcionando
