@@ -15,6 +15,7 @@ import Tooltip from '../Tooltip';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
+  containerStyle?: React.CSSProperties;
   // Receber um componente como uma propriedade
   // Iconbaseprops é para dizer que o componente possui propriedades padrões
   icon?: React.ComponentType<IconBaseProps>;
@@ -22,7 +23,12 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 // Passa a interface como parâmetro para tornar obrigatório as os valores e tipagem
 //                                Icon = converte a variavel com componente com camelcase
-const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
+const Input: React.FC<InputProps> = ({
+  name,
+  containerStyle = {},
+  icon: Icon,
+  ...rest
+}) => {
   // manipulação direta no elemento
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -58,7 +64,12 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
     });
   }, [fieldName, registerField]);
   return (
-    <Container isErrored={!!error} isFilled={isFilled} isFocused={isFocused}>
+    <Container
+      style={containerStyle}
+      isErrored={!!error}
+      isFocused={isFocused}
+      isFilled={isFilled}
+    >
       {/* Como o ícone é opcional faz uma verificação se ele existe antes de aplicar a propriedade */}
       {Icon && <Icon size={20} />}
       {/* spread operator pega as propriedades e passa dentro */}
